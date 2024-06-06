@@ -1,0 +1,27 @@
+Start this repository for RRFS version 2
+
+1. To checkout and compile the code:
+
+git clone https://github.com/hu5970/rrfs2_utils.git
+cd rrfs2_utils
+./build.utils
+
+To make a fresh build of the code, please remove build directory.
+
+The build was tested on Jet and Hera.
+After the build, the executable is in ./build/bin
+
+2. To run soil surgery:
+
+1). copy RAP/HRRR soil files (initial condition netcdf file: sfc_rap and sfc_hrrr) to the run directory.
+2). copy MPAS initial condition file (conus.init.nc) to the run directory.
+3).Build the namelist file: use_raphrrr_sfc.namelist
+&setup
+rapfile=sfc_rap
+hrrrfile=sfc_hrrr
+hrrr_akfile='missing'
+mpasfile='conus.init.nc'
+/
+
+4) run executable in the run directory with one core.
+

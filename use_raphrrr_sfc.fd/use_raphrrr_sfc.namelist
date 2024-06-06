@@ -1,0 +1,6 @@
+&setup
+rapfile=sfc_rap
+hrrrfile=sfc_hrrr
+hrrr_akfile='missing'
+mpasfile='conus.init.nc'
+/
